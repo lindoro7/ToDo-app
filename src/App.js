@@ -1,7 +1,14 @@
-import "./App.css";
+import React from "react";
+import { Typography } from "@mui/material";
 
 function App() {
-  return <h3>Hello</h3>;
+  return (
+    <div>
+      <Typography variant='h3' component='h3'>
+        Hello
+      </Typography>
+    </div>
+  );
 }
 
 export default App;
