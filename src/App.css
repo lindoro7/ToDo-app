@@ -1,0 +1,21 @@
+/* App.css */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column; /* Вертикальное расположение элементов */
+  justify-content: flex-start; /* Начало по вертикали */
+  align-items: center; /* Центрируем содержимое по горизонтали */
+  height: 100vh; /* Высота контейнера на весь экран */
+  width: 100vw; /* Ширина контейнера на весь экран */
+  background-color: #add8e6; /* Слегка голубой фон */
+  overflow-y: auto; /* Прокрутка по вертикали при необходимости */
+  padding: 0 10%; /* Отступы по 10% с каждой стороны */
+  box-sizing: border-box; /* Учитываем отступы в общей ширине */
+}
