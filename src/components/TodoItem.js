@@ -4,7 +4,7 @@ import DoneOutlineIcon from "@mui/icons-material/DoneOutline";
 import PendingActionsIcon from "@mui/icons-material/PendingActions";
 import DeleteIcon from "@mui/icons-material/Delete";
 
-function TodoItem({ todo }) {
+function TodoItem({ todo, onDelete, onToggleStatus }) {
   return (
     <Box
       display='flex'
@@ -24,6 +24,7 @@ function TodoItem({ todo }) {
           variant='outlined'
           color={todo.status === "done" ? "success" : "secondary"}
           style={{ marginRight: "5px", flexShrink: 0 }}
+          onClick={() => onToggleStatus(todo.id)}
         >
           {todo.status === "done" ? (
             <DoneOutlineIcon />
@@ -31,7 +32,12 @@ function TodoItem({ todo }) {
             <PendingActionsIcon />
           )}
         </Button>
-        <Button variant='outlined' color='error' style={{ flexShrink: 0 }}>
+        <Button
+          variant='outlined'
+          color='error'
+          style={{ flexShrink: 0 }}
+          onClick={() => onDelete(todo.id)}
+        >
           <DeleteIcon />
         </Button>
       </Box>
